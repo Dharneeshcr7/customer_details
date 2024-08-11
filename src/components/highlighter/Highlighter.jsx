@@ -9,6 +9,7 @@ const Highlighter = () => {
     const [page, setPage] = useState(0);
     const { data, setUser } = useContext(UserContext);
     const imagesPerPage = 9;
+    
 
     const fetchImages = async () => {
         try {
@@ -46,7 +47,7 @@ const Highlighter = () => {
             <div className="address">{data.address}</div>
 
             <div className="images-container">
-                {images.map((url, index) => (
+                {images.slice(page*9,(page+1)*9).map((url, index) => (
                     <img key={index} src={url} alt="Image"  />
                 ))}
             </div>
