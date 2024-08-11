@@ -1,20 +1,39 @@
-.normal{
-    
-    background-color: #ffffff; /* White background */
-    border-radius: 8px; /* Rounded corners */
-    padding: 16px; /* Space inside the card */
-    margin: 16px; /* Space outside the card */
-    max-width: 300px; /* Maximum width of the card */
-    text-align: center; /* Center the text */      
+
+
+/* Ensure the card container uses flexbox */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Wraps the cards to the next line if needed */
+    gap: 16px; /* Space between cards */
+    padding: 16px; /* Space around the container */
 }
 
-.highlight{
-    
+/* Basic card styling */
+.card {
     background-color: #ffffff; /* White background */
     border-radius: 8px; /* Rounded corners */
     padding: 16px; /* Space inside the card */
-    margin: 16px; /* Space outside the card */
-    max-width: 300px; /* Maximum width of the card */
-    text-align: center; /* Center the text */     
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    cursor: pointer; /* Pointer cursor on hover */
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and flex-basis for responsive width */
+    max-width: 100%; /* Ensure card doesn't exceed parent width */
+}
+
+/* Normal card state */
+.card.normal {
+    background-color: #ffffff; /* White background */
+}
+
+/* Highlighted card state */
+.card.highlight {
+    background-color: #e0f7fa; /* Light cyan background for highlight */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    transform: scale(1.05); /* Slightly enlarge card when highlighted */
+}
+
+/* Hover effect for card */
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    transform: scale(1.02); /* Slightly enlarge card on hover */
 }

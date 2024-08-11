@@ -33,7 +33,7 @@ const List=()=>{
 
     
     return(
-        <div className="list">
+        <div className="max-h-[400px] overflow-y-auto border border-gray-300 p-4">
          <InfiniteScroll
            dataLength={items.length}
            next={fetchData}

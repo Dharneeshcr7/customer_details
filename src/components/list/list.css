@@ -1,3 +1,4 @@
 .list{
     background-color: aqua;
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
 }

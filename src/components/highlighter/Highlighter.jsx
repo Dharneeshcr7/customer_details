@@ -5,6 +5,7 @@ import "./highlighter.css"
 import { UserContext } from "../../context/UserContext";
 const Highlighter = () => {
     const [images, setImages] = useState([]);
+    const [superset,setSuperset]=useState([]);
     const {data,setUser}=useContext(UserContext)
     const fetchImages = async () => {
         try {
