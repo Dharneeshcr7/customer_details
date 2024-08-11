@@ -6,7 +6,7 @@ const useFetch=(url)=>{
     const [data,setData]=useState([])
     const [load,setLoad]=useState(false)
     const [error,setError]=useState(false)
-
+    
     useEffect(
         ()=>{
             const fetchdata =async ()=>{

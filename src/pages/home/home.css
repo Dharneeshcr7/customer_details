@@ -1,0 +1,12 @@
+.home{
+    display: flex;
+}
+.list{
+    width: 40%;
+    background-color: blue;
+}
+.highlighter{
+    width: 60%;
+    padding: 20px;
+    background-color: #fff;
+}
