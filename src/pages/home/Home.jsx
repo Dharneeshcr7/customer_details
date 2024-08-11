@@ -9,7 +9,7 @@ const Home=()=>{
     const {data,setUser}=useContext(UserContext);
     const getInit=async()=>{
         const res=await axios.get(`https://customer-details-9dgv.onrender.com/people?_page=1`)
-        console.log(res)
+        //console.log(res)
         setUser(res.data.data[0]);
 
     }

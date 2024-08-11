@@ -1,0 +1,20 @@
+.normal{
+    
+    background-color: #ffffff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px; /* Space inside the card */
+    margin: 16px; /* Space outside the card */
+    max-width: 300px; /* Maximum width of the card */
+    text-align: center; /* Center the text */      
+}
+
+.highlight{
+    
+    background-color: #ffffff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px; /* Space inside the card */
+    margin: 16px; /* Space outside the card */
+    max-width: 300px; /* Maximum width of the card */
+    text-align: center; /* Center the text */     
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}

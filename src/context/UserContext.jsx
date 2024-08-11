@@ -4,6 +4,7 @@ const INIT_USER={
     name:"Random name",
     title:"Random Title",
     address:"Random Address",
+    id:null,
 }
 
 export const UserContext=createContext();
