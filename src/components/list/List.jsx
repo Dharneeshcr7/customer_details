@@ -32,13 +32,20 @@ const List=()=>{
     return(
         <div className="max-h-[400px] overflow-y-auto border border-gray-300 p-4">
         
-        {books?books.map((book, index) => (
-            <Card
-                key={book.id} 
-                data={book}
-                ref={books.length === index + 1 ? lastBookElementRef : null}
-            />
-        )):<h>Loading...</h>}
+        {books.map((book, index) => (
+          <Card
+              key={book.id} 
+              data={book}
+              ref={books.length === index + 1 ? lastBookElementRef : null}
+          />
+      ))}
+
+      {(books.length==0) && 
+        <div className="loading-container">
+          <div className="spinner"></div>
+          <p>Loading...</p>
+        </div>
+       }
          
          
         </div>
