@@ -7,7 +7,7 @@
 #Have used  pagination and Infinite Scrolling for getting user details
 
 
-#To display images , unsplash API is called to get 27 images at a time, but at every render 9 images takes place. When all 27 images are rendered, then unsplash API is called again.
+#To display images , unsplash API is called to get 27 images at a time, but at every render 9 images takes place. When all 27 images are rendered, then unsplash API is called again.This is to counter Rate limiting by unsplash , reducing the requests to unsplash api.
 
 #Dployed link:https://customer-details-1.onrender.com/
 
