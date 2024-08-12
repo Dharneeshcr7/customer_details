@@ -8,6 +8,7 @@ const Highlighter = () => {
     const [images, setImages] = useState([]);
     const [page, setPage] = useState(0);
     const { data, setUser } = useContext(UserContext);
+    const IMG_SIZE=27
     const imagesPerPage = 9;
     
 
@@ -25,20 +26,28 @@ const Highlighter = () => {
             console.error('Error fetching images:', error);
         }
     };
+    const chechFetch=()=>{
+        console.log(page,images.length)
+        if (page < IMG_SIZE/imagesPerPage-1) {
+            setPage(prev => (prev + 1));
+        } else {
+            fetchImages();
+        }
+    }
+
+    useEffect(()=>{
+        fetchImages();
+    },[])
 
     useEffect(() => {
-        fetchImages(); // Initial fetch
+        //fetchImages(); // Initial fetch
 
-        const pageInterval = setInterval(() => {
-            if (page < images.length / imagesPerPage - 1) {
-                setPage(prev => prev + 1);
-            } else {
-                fetchImages();
-            }
+        const pageTimeout = setTimeout(() => {
+            chechFetch();
         }, 10000);  // 10 seconds
 
-        return () => clearInterval(pageInterval); // Clean up on component unmount
-    }, []);
+        return () => clearInterval(pageTimeout); // Clean up on component unmount
+    }, [page]);
 
     return (
         <div className="highlighter">

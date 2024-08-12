@@ -19,7 +19,7 @@ const List=()=>{
       } = useBookSearch(page)
       const observer = useRef()
       const lastBookElementRef = useCallback(node => {
-        console.log('last elemrent')
+        
         if (loading) return
         if (observer.current) observer.current.disconnect()
         observer.current = new IntersectionObserver(entries => {
